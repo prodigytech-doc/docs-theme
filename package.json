@@ -5,6 +5,17 @@
   "type": "module",
   "main": "./dist/client/theme-default/index.js",
   "types": "./theme.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    "./client": {
+      "types": "./client.d.ts",
+      "default": "./dist/client/index.js"
+    },
+    "./theme": {
+      "types": "./theme.d.ts",
+      "default": "./dist/client/theme-default/index.js"
+    }
+  },
   "files": [
     "dist",
     "types",
