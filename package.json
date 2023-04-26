@@ -2,7 +2,6 @@
   "name": "metaapp-prodigytech-doc-theme",
   "version": "1.0.22",
   "description": "Vite & Vue powered static site generator",
-  "type": "module",
   "types": "./theme.d.ts",
   "exports": {
     ".": {

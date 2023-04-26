@@ -1,4 +1,4 @@
-import * as pandoras from 'metaapp-pandora-sdk'
+import pandoras from 'metaapp-pandora-sdk'
 import { onMounted, ref, watch, computed } from 'vue'
 import { detect } from 'detect-browser'
 import { useData, useRoute, inBrowser } from 'vitepress'
