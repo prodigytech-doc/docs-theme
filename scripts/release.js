@@ -86,6 +86,8 @@ async function main() {
   step('\nPublishing the package...')
   await run('npm', [
     'publish',
+    '--registry',
+    'https://api-web-registry.metaapp.cn/',
     '--tag',
     tags[tag],
     '--ignore-scripts',
