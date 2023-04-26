@@ -13,7 +13,7 @@ export type {
   HeadConfig,
   Header,
   LocaleConfig
-} from '../types/shared.js'
+} from '../../types/shared.js'
 
 // composables
 export { useData } from './app/data.js'
