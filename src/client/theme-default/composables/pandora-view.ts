@@ -1,9 +1,10 @@
-import pandoras from 'metaapp-pandora-sdk'
+import * as pandoras from 'metaapp-pandora-sdk'
 import { onMounted, ref, watch, computed } from 'vue'
 import { detect } from 'detect-browser'
 import { useData, useRoute, inBrowser } from 'vitepress'
 const browser = detect()
 
+console.log('pandoras', pandoras)
 let initPandora = pandoras as any
 let hasDocInfo = false
 let cacheQuest: { key: string; value: Record<string, any> }[] = []
