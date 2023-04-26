@@ -74,7 +74,7 @@ async function main() {
 
   // Build the package.
   step('\nBuilding the package...')
-  await run('npm', ['build'])
+  await run('npm', ['run', 'build'])
 
   const { yes: changelogOk } = await prompts({
     type: 'confirm',

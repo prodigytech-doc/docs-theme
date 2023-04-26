@@ -1,6 +1,6 @@
 {
   "name": "prodigytech-doc-theme",
-  "version": "1.0.0-alpha.33",
+  "version": "1.0.0",
   "description": "Vite & Vue powered static site generator",
   "type": "module",
   "main": "./dist/client/theme-default/index.js",
