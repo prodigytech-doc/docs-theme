@@ -5,6 +5,7 @@ import { useData, useRoute, inBrowser } from 'vitepress'
 const browser = detect()
 
 let initPandora: undefined | PandoraSDKInterface
+let hasDocInfo = false
 let cacheQuest: { key: string; value: Record<string, any> }[] = []
 
 async function loadPandora() {
@@ -26,9 +27,7 @@ async function loadPandora() {
       enableBridge: false,
       browser_name: browser?.name,
       browser_version: browser?.version,
-      os_type: browser?.os,
-      docs_type: theme.value.pandora.type,
-      api_version: theme.value.pandora.version
+      os_type: browser?.os
     } as any,
     {
       appkey: 'cDEwMTE2',
@@ -50,6 +49,16 @@ if (inBrowser) {
 export const pandora = {
   send: (key: string, obj: Record<string, any>) => {
     if (initPandora) {
+      if (!hasDocInfo) {
+        try {
+          const { theme } = useData()
+          initPandora.send('config', {
+            docs_type: theme.value.pandora.type,
+            api_version: theme.value.pandora.version
+          })
+          hasDocInfo = true
+        } catch (error) {}
+      }
       initPandora.send(key, {
         ...obj,
         url: window.location.href
