@@ -9,7 +9,6 @@ let hasDocInfo = false
 let cacheQuest: { key: string; value: Record<string, any> }[] = []
 
 async function loadPandora() {
-  ;(window as any)._API_HOST = () => ({})
   initPandora = (await import(
     'metaapp-pandora-sdk'
   )) as unknown as PandoraSDKInterface

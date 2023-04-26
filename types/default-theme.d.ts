@@ -81,6 +81,10 @@ export namespace DefaultTheme {
      * The carbon ads options. Leave it undefined to disable the ads feature.
      */
     carbonAds?: CarbonAdsOptions
+    pandora: {
+      version?: string
+      type: string
+    }
   }
 
   // nav -----------------------------------------------------------------------
@@ -260,12 +264,8 @@ export namespace DefaultTheme {
         facetFilters: string[]
         name: string
       }[]
-      searchPage?: string
     }
-    pandora: {
-      version?: string
-      type: string
-    }
+    searchPage?: string
   }
 
   // carbon ads ----------------------------------------------------------------
