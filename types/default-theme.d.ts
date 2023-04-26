@@ -253,6 +253,19 @@ export namespace DefaultTheme {
     disableUserPersonalization?: boolean
     initialQuery?: string
     buttonText?: string
+    project: {
+      active: string
+      arr: {
+        key: string
+        facetFilters: string[]
+        name: string
+      }[]
+      searchPage?: string
+    }
+    pandora: {
+      version?: string
+      type: string
+    }
   }
 
   // carbon ads ----------------------------------------------------------------
