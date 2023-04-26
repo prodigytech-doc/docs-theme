@@ -73,8 +73,8 @@ async function main() {
   updatePackage(targetVersion)
 
   // Build the package.
-  step('\nBuilding the package...')
-  await run('npm', ['run', 'build'])
+  // step('\nBuilding the package...')
+  // await run('npm', ['run', 'build'])
 
   // Commit changes to the Git and create a tag.
   step('\nCommitting changes...')
