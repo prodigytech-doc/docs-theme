@@ -8,6 +8,7 @@ let initPandora: undefined | PandoraSDKInterface
 let cacheQuest: { key: string; value: Record<string, any> }[] = []
 
 async function loadPandora() {
+  const { theme } = useData()
   ;(window as any)._API_HOST = () => {}
   initPandora = (await import(
     'metaapp-pandora-sdk'
@@ -26,8 +27,8 @@ async function loadPandora() {
       browser_name: browser?.name,
       browser_version: browser?.version,
       os_type: browser?.os,
-      docs_type: 'api',
-      api_version: '024'
+      docs_type: theme.value.pandora.type,
+      api_version: theme.value.pandora.version
     } as any,
     {
       appkey: 'cDEwMTE2',
