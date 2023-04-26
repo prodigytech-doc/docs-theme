@@ -151,6 +151,7 @@ export namespace DefaultTheme {
      * @default false
      */
     collapsed?: boolean
+    link?: string
   }
 
   export type SidebarItem =
