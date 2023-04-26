@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { withBase, useData } from 'vitepress'
-import { EXTERNAL_URL_RE, PATHNAME_PROTOCOL_RE } from '../../shared.js'
+import { EXTERNAL_URL_RE, PATHNAME_PROTOCOL_RE } from '../../shared'
 
 export const HASH_RE = /#.*$/
 export const EXT_RE = /(index)?\.(md|html)$/
