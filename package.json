@@ -1,9 +1,8 @@
 {
   "name": "metaapp-prodigytech-doc-theme",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "Vite & Vue powered static site generator",
   "types": "./theme.d.ts",
-  "type": "commonjs",
   "exports": {
     ".": {
       "types": "./theme.d.ts",
@@ -54,7 +53,8 @@
     "detect-browser": "^5.3.0",
     "shiki": "^0.12.1",
     "vite": "^4.0.2",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "metaapp-pandora-sdk": "^4.1.2"
   },
   "devDependencies": {
     "@mdit-vue/plugin-component": "^0.11.1",
