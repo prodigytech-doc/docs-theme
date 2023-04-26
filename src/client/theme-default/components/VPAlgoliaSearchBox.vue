@@ -40,7 +40,7 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
   // doesn't support multiple locales as of now.
   const options = Object.assign<{}, {}, DocSearchProps>({}, userOptions, {
     container: 'docsearch',
-
+    // @ts-ignore
     navigator: {
       navigate({ itemUrl }: any) {
         const { pathname: hitPathname } = new URL(

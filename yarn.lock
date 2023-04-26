@@ -9,6 +9,13 @@
   dependencies:
     "@algolia/autocomplete-shared" "1.7.4"
 
+"@algolia/autocomplete-core@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.npmmirror.com/@algolia/autocomplete-core/-/autocomplete-core-1.8.2.tgz#8d758c8652742e2761450d2b615a841fca24e10e"
+  integrity sha512-mTeshsyFhAqw/ebqNsQpMtbnjr+qVOSKXArEj4K0d7sqc8It1XD0gkASwecm9mF/jlOQ4Z9RNg1HbdA8JPdRwQ==
+  dependencies:
+    "@algolia/autocomplete-shared" "1.8.2"
+
 "@algolia/autocomplete-preset-algolia@1.7.4":
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.7.4.tgz#610ee1d887962f230b987cba2fd6556478000bc3"
@@ -16,10 +23,22 @@
   dependencies:
     "@algolia/autocomplete-shared" "1.7.4"
 
+"@algolia/autocomplete-preset-algolia@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.npmmirror.com/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.8.2.tgz#706e87f94c5f198c0e90502b97af09adeeddcc79"
+  integrity sha512-J0oTx4me6ZM9kIKPuL3lyU3aB8DEvpVvR6xWmHVROx5rOYJGQcZsdG4ozxwcOyiiu3qxMkIbzntnV1S1VWD8yA==
+  dependencies:
+    "@algolia/autocomplete-shared" "1.8.2"
+
 "@algolia/autocomplete-shared@1.7.4":
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/@algolia/autocomplete-shared/-/autocomplete-shared-1.7.4.tgz#78aea1140a50c4d193e1f06a13b7f12c5e2cbeea"
   integrity sha512-2VGCk7I9tA9Ge73Km99+Qg87w0wzW4tgUruvWAn/gfey1ZXgmxZtyIRBebk35R1O8TbK77wujVtCnpsGpRy1kg==
+
+"@algolia/autocomplete-shared@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.npmmirror.com/@algolia/autocomplete-shared/-/autocomplete-shared-1.8.2.tgz#e6972df5c6935a241f16e4909aa82902338e029d"
+  integrity sha512-b6Z/X4MczChMcfhk6kfRmBzPgjoPzuS9KGR4AFsiLulLNRAAqhP+xZTKtMnZGhLuc61I20d5WqlId02AZvcO6g==
 
 "@algolia/cache-browser-local-storage@4.17.0":
   version "4.17.0"
@@ -76,7 +95,7 @@
     "@algolia/requester-common" "4.17.0"
     "@algolia/transporter" "4.17.0"
 
-"@algolia/client-search@4.17.0":
+"@algolia/client-search@4.17.0", "@algolia/client-search@^4.15.0":
   version "4.17.0"
   resolved "https://registry.yarnpkg.com/@algolia/client-search/-/client-search-4.17.0.tgz#0053c682f5f588e006c20791c27e8bcb0aa5b53c"
   integrity sha512-x4P2wKrrRIXszT8gb7eWsMHNNHAJs0wE7/uqbufm4tZenAp+hwU/hq5KVsY50v+PfwM0LcDwwn/1DroujsTFoA==
@@ -493,6 +512,18 @@
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@mdit-vue/types/-/types-0.11.0.tgz#ab9c6f4e69d9c9eaabf1a73e59dc699875b224ef"
   integrity sha512-ygCGP7vFpqS02hpZwEe1uz8cfImWX06+zRs08J+tCZRKb6k+easIaIHFtY9ZSxt7j9L/gAPLDo/5RmOT6z0DPQ==
+
+"@metaapp/docsearch-react@^4.3.10":
+  version "4.3.10"
+  resolved "https://api-web-registry.metaapp.cn/@metaapp%2fdocsearch-react/-/docsearch-react-4.3.10.tgz#f8e74455d7572f19c24a8cdffc776026e309c37c"
+  integrity sha512-MQHiX1VlkUifoRHhi9BvapI5XBF80OgLp8zURsFQzVWvjIhdIyMc02k06v1J/jbLVt/fC614meaOz9bqBLt+2A==
+  dependencies:
+    "@algolia/autocomplete-core" "1.8.2"
+    "@algolia/autocomplete-preset-algolia" "1.8.2"
+    "@docsearch/css" "3.3.3"
+    algoliasearch "^4.0.0"
+  optionalDependencies:
+    "@algolia/client-search" "^4.15.0"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
