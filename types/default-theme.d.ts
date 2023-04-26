@@ -94,6 +94,7 @@ export namespace DefaultTheme {
   export type NavItemWithLink = {
     text: string
     link: string
+    path?: boolean
 
     /**
      * `activeMatch` is expected to be a regex string. We can't use actual
