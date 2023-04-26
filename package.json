@@ -3,6 +3,7 @@
   "version": "1.0.23",
   "description": "Vite & Vue powered static site generator",
   "types": "./theme.d.ts",
+  "type": "commonjs",
   "exports": {
     ".": {
       "types": "./theme.d.ts",
@@ -51,7 +52,6 @@
     "@vueuse/core": "^9.8.2",
     "body-scroll-lock": "4.0.0-beta.0",
     "detect-browser": "^5.3.0",
-    "metaapp-pandora-sdk": "^4.1.3",
     "shiki": "^0.12.1",
     "vite": "^4.0.2",
     "vue": "^3.2.45"
