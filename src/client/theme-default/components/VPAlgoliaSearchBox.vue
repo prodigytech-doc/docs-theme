@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { DefaultTheme } from 'vitepress/theme'
 // import docsearch from '@docsearch/js'
+// @ts-ignore
 import { docsearch } from '@metaapp/docsearch-react'
 import '@metaapp/docsearch-react/style/modal.css'
 import { onMounted } from 'vue'
@@ -41,7 +42,7 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
     container: 'docsearch',
 
     navigator: {
-      navigate({ itemUrl }) {
+      navigate({ itemUrl }: any) {
         const { pathname: hitPathname } = new URL(
           window.location.origin + itemUrl
         )
@@ -56,8 +57,8 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
       }
     },
 
-    transformItems(items) {
-      return items.map((item) => {
+    transformItems(items: any) {
+      return items.map((item: any) => {
         return Object.assign({}, item, {
           url: getRelativePath(item.url)
         })

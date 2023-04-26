@@ -9,7 +9,7 @@ import VPLocalNav from './components/VPLocalNav.vue'
 import VPSidebar from './components/VPSidebar.vue'
 import VPContent from './components/VPContent.vue'
 import VPFooter from './components/VPFooter.vue'
-import { usePandoraView } from './composables/pandora-view'
+import { usePandoraView } from './composables/pandora-view.js'
 
 const {
   isOpen: isSidebarOpen,

@@ -17,7 +17,7 @@
 import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { useEventListener } from '@vueuse/core'
 import VPIconEdit from './icons/VPIconEdit.vue'
-import { pandora, usePandoraParams } from '../composables/pandora-view'
+import { pandora, usePandoraParams } from '../composables/pandora-view.js'
 const pandoraParams = usePandoraParams()
 const xy = reactive({
   x: 0,

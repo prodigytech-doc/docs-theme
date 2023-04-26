@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useEditLink } from '../composables/edit-link'
+import { useEditLink } from '../composables/edit-link.js'
 import { useData, useRoute } from 'vitepress'
 import { computed, provide, ref } from 'vue'
 import { useSidebar } from '../composables/sidebar.js'
@@ -7,7 +7,7 @@ import VPDocAside from './VPDocAside.vue'
 import VPDocFooter from './VPDocFooter.vue'
 import VPLink from './VPLink.vue'
 import VPIconEdit from './icons/VPIconEdit.vue'
-import { pandora, usePandoraParams } from '../composables/pandora-view'
+import { pandora, usePandoraParams } from '../composables/pandora-view.js'
 import VPFeadback from './VPFeadback.vue'
 const { theme, frontmatter } = useData()
 const pandoraParams = usePandoraParams()

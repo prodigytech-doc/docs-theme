@@ -20,7 +20,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { pandora, usePandoraParams } from '../composables/pandora-view'
+import { pandora, usePandoraParams } from '../composables/pandora-view.js'
 import VPIconPraise from './icons/VPIconPraise.vue'
 import VPIconTread from './icons/VPIconTread.vue'
 const props = defineProps<{
