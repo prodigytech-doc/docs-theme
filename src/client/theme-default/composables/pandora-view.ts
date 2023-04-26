@@ -1,15 +1,18 @@
-import pandoras from 'metaapp-pandora-sdk'
+import { PandoraSDKInterface } from 'metaapp-pandora-sdk'
 import { onMounted, ref, watch, computed } from 'vue'
 import { detect } from 'detect-browser'
 import { useData, useRoute, inBrowser } from 'vitepress'
 const browser = detect()
 
-console.log('pandoras', pandoras)
-let initPandora = pandoras as any
+let initPandora: undefined | PandoraSDKInterface
 let hasDocInfo = false
 let cacheQuest: { key: string; value: Record<string, any> }[] = []
 
 async function loadPandora() {
+  initPandora = (await import(
+    'metaapp-pandora-sdk'
+  )) as unknown as PandoraSDKInterface
+
   initPandora.send(
     'config',
     {
