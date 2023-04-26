@@ -9,9 +9,8 @@ let hasDocInfo = false
 let cacheQuest: { key: string; value: Record<string, any> }[] = []
 
 async function loadPandora() {
-  initPandora = (await import(
-    'metaapp-pandora-sdk'
-  )) as unknown as PandoraSDKInterface
+  initPandora = (await import('metaapp-pandora-sdk'))
+    .default as unknown as PandoraSDKInterface
 
   initPandora.send(
     'config',
