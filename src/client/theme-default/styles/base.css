@@ -132,6 +132,10 @@ video {
   width: 100%;
 }
 
+.main img {
+  cursor: pointer;
+}
+
 button,
 input,
 optgroup,
@@ -229,12 +233,4 @@ p {
 
 vite-error-overlay {
   z-index: 9999;
-}
-
-.medium-zoom-overlay {
-  z-index: 20;
-}
-
-.medium-zoom-image {
-  z-index: 21;
 }

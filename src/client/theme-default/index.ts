@@ -14,7 +14,8 @@ import VPScore from './components/VPScore.vue'
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
 import { onMounted, watch } from 'vue'
-import mediumZoom, { Zoom } from 'medium-zoom'
+import ViewerJs from 'viewerjs'
+import 'viewerjs/dist/viewer.min.css'
 
 export { default as VPHomeHero } from './components/VPHomeHero.vue'
 export { default as VPHomeFeatures } from './components/VPHomeFeatures.vue'
@@ -34,16 +35,16 @@ const theme: Theme = {
   },
   setup() {
     const route = useRoute()
-    let zoom: Zoom | undefined
+    let view: ViewerJs | undefined
     watch(route, () => {
-      zoom?.detach()
+      view?.destroy()
       setTimeout(() => {
-        zoom = mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
+        view = new ViewerJs(document.querySelector('body')!)
       })
     })
 
     onMounted(() => {
-      zoom = mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
+      view = new ViewerJs(document.querySelector('.main')!)
     })
   }
 }
