@@ -8,11 +8,13 @@ import './styles/components/vp-code-group.css'
 import './styles/components/vp-doc.css'
 import './styles/components/vp-sponsor.css'
 
-import { Theme } from 'vitepress'
+import { Theme, useRoute } from 'vitepress'
 import VPBadge from './components/VPBadge.vue'
 import VPScore from './components/VPScore.vue'
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
+import { onMounted, watch } from 'vue'
+import mediumZoom, { Zoom } from 'medium-zoom'
 
 export { default as VPHomeHero } from './components/VPHomeHero.vue'
 export { default as VPHomeFeatures } from './components/VPHomeFeatures.vue'
@@ -29,6 +31,20 @@ const theme: Theme = {
   enhanceApp: ({ app }) => {
     app.component('Badge', VPBadge)
     app.component('Score', VPScore)
+  },
+  setup() {
+    const route = useRoute()
+    let zoom: Zoom | undefined
+    watch(route, () => {
+      zoom?.detach()
+      setTimeout(() => {
+        zoom = mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
+      })
+    })
+
+    onMounted(() => {
+      zoom = mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
+    })
   }
 }
 

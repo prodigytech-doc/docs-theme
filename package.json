@@ -51,10 +51,11 @@
     "@vueuse/core": "^9.8.2",
     "body-scroll-lock": "4.0.0-beta.0",
     "detect-browser": "^5.3.0",
+    "medium-zoom": "^1.0.8",
+    "metaapp-pandora-sdk": "^5.0.2",
     "shiki": "^0.12.1",
     "vite": "^4.0.2",
-    "vue": "^3.2.45",
-    "metaapp-pandora-sdk": "^5.0.2"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@mdit-vue/plugin-component": "^0.11.1",
