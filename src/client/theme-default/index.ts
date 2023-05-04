@@ -39,7 +39,7 @@ const theme: Theme = {
     watch(route, () => {
       view?.destroy()
       setTimeout(() => {
-        view = new ViewerJs(document.querySelector('body')!)
+        view = new ViewerJs(document.querySelector('.main')!)
       })
     })
 
