@@ -85,6 +85,7 @@ export namespace DefaultTheme {
       version?: string
       type: string
     }
+    feedback?: string
   }
 
   // nav -----------------------------------------------------------------------

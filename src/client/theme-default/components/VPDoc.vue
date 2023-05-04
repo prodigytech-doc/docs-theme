@@ -38,7 +38,7 @@ provide('onContentUpdated', onContentUpdated)
     class="VPDoc"
     :class="{ 'has-sidebar': hasSidebar, 'has-aside': hasAside }"
   >
-    <VPFeadback />
+    <VPFeadback v-if="theme.feedback" />
     <div class="container">
       <div v-if="hasAside" class="aside">
         <div class="aside-curtain" />

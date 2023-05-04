@@ -18,6 +18,8 @@ import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { useEventListener } from '@vueuse/core'
 import VPIconEdit from './icons/VPIconEdit.vue'
 import { pandora, usePandoraParams } from '../composables/pandora-view.js'
+import { useData } from 'vitepress'
+const { theme } = useData()
 const pandoraParams = usePandoraParams()
 const xy = reactive({
   x: 0,
@@ -55,7 +57,7 @@ function tapGithub() {
     type: pandoraParams.type
   })
   window.open(
-    `https://github.com/prodigytech-doc/api-docs/issues/new?assignees=&labels=documentation&template=bug_report.yml&select-content=${encodeURIComponent(
+    `${theme.value.feedback}issues/new?assignees=&labels=documentation&template=bug_report.yml&select-content=${encodeURIComponent(
       oldSelectText.value
     )}&url=${encodeURIComponent(window.location.href)}`
   )
