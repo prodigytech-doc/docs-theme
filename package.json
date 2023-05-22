@@ -45,7 +45,7 @@
   "dependencies": {
     "@docsearch/css": "^3.3.0",
     "@docsearch/js": "^3.3.0",
-    "@metaapp/docsearch-react": "^4.3.10",
+    "@metaapp/docsearch-react": "^4.3.11",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/devtools-api": "^6.4.5",
     "@vueuse/core": "^9.8.2",
