@@ -102,7 +102,7 @@ export function usePandoraView() {
       pandora.send('page_view_api', {
         name: pandoraParams.name,
         type: pandoraParams.type,
-        page_hash: v?.replace('#', '')
+        page_hash: decodeURIComponent(v?.replace('#', '') ?? '')
       })
     }, 3000)
   })
