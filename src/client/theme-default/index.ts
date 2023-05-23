@@ -16,6 +16,7 @@ import NotFound from './NotFound.vue'
 import { onMounted, watch } from 'vue'
 import ViewerJs from 'viewerjs'
 import 'viewerjs/dist/viewer.min.css'
+import { pandora, usePandoraParams } from './composables/pandora-view'
 
 export { default as VPHomeHero } from './components/VPHomeHero.vue'
 export { default as VPHomeFeatures } from './components/VPHomeFeatures.vue'
@@ -35,16 +36,53 @@ const theme: Theme = {
   },
   setup() {
     const route = useRoute()
+    const { name, type } = usePandoraParams()
     let view: ViewerJs | undefined
+    let Anchors: NodeListOf<HTMLAnchorElement>
+
+    function findA(el: HTMLElement): string {
+      if (el.tagName === 'A') {
+        return (el as HTMLAnchorElement).href
+      } else {
+        if (el.parentElement) {
+          return findA(el.parentElement)
+        } else {
+          return ''
+        }
+      }
+    }
+    function linkClick(e: Event) {
+      const el = e.target as HTMLElement
+      const a_name = el.innerText
+      const a_url = findA(el)
+      pandora.send('doc_tap_doc', {
+        name,
+        type,
+        a_name,
+        a_url,
+        page_hash: decodeURIComponent(location.href.replace('#', ''))
+      })
+    }
     watch(route, () => {
       view?.destroy()
+      Anchors.forEach((a) => {
+        a.removeEventListener('click', linkClick)
+      })
       setTimeout(() => {
         view = new ViewerJs(document.querySelector('.main')!)
+        Anchors = document.querySelectorAll<HTMLAnchorElement>('.content a')
+        Anchors.forEach((a) => {
+          a.addEventListener('click', linkClick)
+        })
       })
     })
 
     onMounted(() => {
       view = new ViewerJs(document.querySelector('.main')!)
+      Anchors = document.querySelectorAll<HTMLAnchorElement>('.content a')
+      Anchors.forEach((a) => {
+        a.addEventListener('click', linkClick)
+      })
     })
   }
 }
