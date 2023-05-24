@@ -284,6 +284,10 @@ function load() {
   background-color: var(--vp-c-white);
 }
 
+.DocSearch-SearchButton {
+  background-color: var(--vp-c-brand);
+}
+
 .dark .DocSearch-Form {
   background-color: var(--vp-c-bg-mute);
 }

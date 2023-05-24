@@ -513,10 +513,10 @@
   resolved "https://registry.npmmirror.com/@mdit-vue/types/-/types-0.11.0.tgz#ab9c6f4e69d9c9eaabf1a73e59dc699875b224ef"
   integrity sha512-ygCGP7vFpqS02hpZwEe1uz8cfImWX06+zRs08J+tCZRKb6k+easIaIHFtY9ZSxt7j9L/gAPLDo/5RmOT6z0DPQ==
 
-"@metaapp/docsearch-react@^4.3.13":
-  version "4.3.13"
-  resolved "https://api-web-registry.metaapp.cn/@metaapp%2fdocsearch-react/-/docsearch-react-4.3.13.tgz#52bc9a9472b9fc91e1dc9c956f2f4f272867b549"
-  integrity sha512-QJvTRM5BQBa6y1MqUhh29CagiHUp2WLN0EQ/iQOHpfP1wu3y6/gF7t3t10IAJFbQeVttLjhubKUstcE/v3JZWQ==
+"@metaapp/docsearch-react@^4.3.14":
+  version "4.3.14"
+  resolved "https://api-web-registry.metaapp.cn/@metaapp%2fdocsearch-react/-/docsearch-react-4.3.14.tgz#7e09f04fc0b98d553b46e49dffe64cec2e7ca2cc"
+  integrity sha512-fAOSWO+JaiFRgamK9VZV4mSr+yeAxcEjFiLKJ0/f4l8Ts8tLG68fzl7CqeUpB+GvYvnDuwqYn0PGaiUzBTDKvA==
   dependencies:
     "@algolia/autocomplete-core" "1.8.2"
     "@algolia/autocomplete-preset-algolia" "1.8.2"
