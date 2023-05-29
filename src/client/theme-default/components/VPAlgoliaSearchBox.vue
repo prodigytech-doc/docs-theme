@@ -6,13 +6,17 @@ import { docsearch } from '@metaapp/docsearch-react'
 import '@metaapp/docsearch-react/style/modal.css'
 import { onMounted } from 'vue'
 import { useRouter, useRoute, useData } from 'vitepress'
+import { pandora } from '../composables/pandora-view'
 
 const router = useRouter()
 const route = useRoute()
 const { theme, site } = useData()
 
 onMounted(() => {
-  initialize(theme.value.algolia)
+  initialize({
+    pandora: pandora,
+    ...theme.value.algolia
+  })
   setTimeout(poll, 16)
 })
 
