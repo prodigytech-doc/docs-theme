@@ -262,11 +262,17 @@ export namespace DefaultTheme {
     buttonText?: string
     project: {
       active: string
-      arr: {
-        key: string
-        facetFilters: string[]
-        name: string
-      }[]
+      arr: (
+        | {
+            key: string
+            facetFilters: string[]
+            name: string
+          }
+        | {
+            name: string
+            url: string
+          }
+      )[]
     }
     searchPage?: string
   }
