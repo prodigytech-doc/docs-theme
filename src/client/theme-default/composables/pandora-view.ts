@@ -1,5 +1,5 @@
 import { PandoraSDKInterface } from 'metaapp-pandora-sdk'
-import { onMounted, ref, watch, computed } from 'vue'
+import { onMounted, ref, watch, computed, reactive } from 'vue'
 import { detect } from 'detect-browser'
 import { useData, useRoute, inBrowser } from 'vitepress'
 const browser = detect()
@@ -68,17 +68,17 @@ export const pandora = {
 
 export function usePandoraParams() {
   const { page } = useData()
-  const pandoraParams = computed(() => {
-    const [type, name] = page.value.relativePath.replace('.md', '').split('/')
-    return {
-      name,
-      type
-    }
+  const [type, name] = page.value.relativePath.replace('.md', '').split('/')
+  const obj = reactive({
+    name: name,
+    type: type
   })
-  return {
-    name: pandoraParams.value.name,
-    type: pandoraParams.value.type
-  }
+  watch(page, () => {
+    const [type, name] = page.value.relativePath.replace('.md', '').split('/')
+    obj.name = name
+    obj.type = type
+  })
+  return obj
 }
 
 /** 处理 */
@@ -97,7 +97,7 @@ export function usePandoraView() {
     }
   )
   watch(hash, (v, o) => {
-    clearInterval(timeer.value)
+    clearTimeout(timeer.value)
     timeer.value = window.setTimeout(() => {
       pandora.send('page_view_api', {
         name: pandoraParams.name,
