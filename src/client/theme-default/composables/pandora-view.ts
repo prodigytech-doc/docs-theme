@@ -81,6 +81,10 @@ export function usePandoraParams() {
   return obj
 }
 
+function decode(str?: string) {
+  return decodeURIComponent(str?.replace('#', '') ?? '')
+}
+
 /** 处理 */
 export function usePandoraView() {
   let hash = ref<string>()
@@ -92,17 +96,21 @@ export function usePandoraView() {
     (v, o) => {
       pandora.send('page_view_api', {
         name: pandoraParams.name,
-        type: pandoraParams.type
+        type: pandoraParams.type,
+        report_type: '页面切换',
+        page_hash: decode(hash.value)
       })
     }
   )
+
   watch(hash, (v, o) => {
     clearTimeout(timeer.value)
     timeer.value = window.setTimeout(() => {
       pandora.send('page_view_api', {
         name: pandoraParams.name,
         type: pandoraParams.type,
-        page_hash: decodeURIComponent(v?.replace('#', '') ?? '')
+        report_type: 'hash切换',
+        page_hash: decode(v)
       })
     }, 3000)
   })
@@ -114,7 +122,9 @@ export function usePandoraView() {
     }
     pandora.send('page_view_api', {
       name: pandoraParams.name,
-      type: pandoraParams.type
+      type: pandoraParams.type,
+      report_type: '页面进入',
+      page_hash: decode(hash.value)
     })
   })
 }
