@@ -9,8 +9,7 @@ import {
 } from '../composables/outline.js'
 import VPDocAsideOutlineItem from './VPDocAsideOutlineItem.vue'
 
-const { frontmatter, theme } = useData()
-
+const { frontmatter, theme, page } = useData()
 const pageOutline = computed<DefaultTheme.Config['outline']>(
   () => frontmatter.value.outline ?? theme.value.outline
 )
@@ -47,7 +46,7 @@ function handleClick({ target: el }: Event) {
       <div class="outline-marker" ref="marker" />
 
       <div class="outline-title">
-        {{ theme.outlineTitle || 'On this page' }}
+        {{ theme.outlineTitle || page.title }}
       </div>
 
       <nav aria-labelledby="doc-outline-aria-label">
