@@ -11,12 +11,11 @@ let cacheQuest: { key: string; value: Record<string, any> }[] = []
 async function loadPandora() {
   initPandora = (await import('metaapp-pandora-sdk'))
     .default as unknown as PandoraSDKInterface
-
+  console.log('ccc')
   initPandora.send(
     'config',
     {
       index_type: 'wl',
-      baseUrl: 'https://push.233leyuan.com',
       selfpackagename: 'com.metaverse.creator.api',
       send_interval: 100,
       debug: false,
@@ -29,7 +28,8 @@ async function loadPandora() {
     } as any,
     {
       appkey: 'cDEwMTE2',
-      zone: 'zh'
+      zone: 'zh',
+      baseUrl: 'https://push.233leyuan.com'
     }
   )
   initPandora.send('start')
