@@ -16,6 +16,7 @@ async function loadPandora() {
     'config',
     {
       index_type: 'wl',
+      baseUrl: 'https://push.233leyuan.com',
       selfpackagename: 'com.metaverse.creator.api',
       send_interval: 100,
       debug: false,
