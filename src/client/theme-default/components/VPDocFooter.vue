@@ -68,7 +68,7 @@ const showFooter = computed(() => {
         </a>
       </div>
     </div>
-    <div style="margin-top: 20px">Copyright © 2023 ark.online All Rights Reserved | 京ICP备18003564号-14</div>
+    <div style="margin-top: 20px">Copyright © 2023 ark.online All Rights Reserved | <a href="https://beian.miit.gov.cn/#/">京ICP备18003564号-14</a></div>
   </footer>
 </template>
 
