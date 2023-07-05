@@ -9,7 +9,6 @@ export function usePrevNext() {
   return computed(() => {
     const sidebar = getSidebar(theme.value.sidebar, page.value.relativePath)
     const candidates = getFlatSideBarLinks(sidebar)
-
     const index = candidates.findIndex((link) => {
       return isActive(page.value.relativePath, link.link)
     })

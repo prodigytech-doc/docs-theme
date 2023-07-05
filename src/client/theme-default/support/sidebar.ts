@@ -47,8 +47,11 @@ export function getFlatSideBarLinks(sidebar: DefaultTheme.SidebarGroup[]) {
     }
   }
 
-  for (const group of sidebar) {
-    recursivelyExtractLinks(group.items)
-  }
+  recursivelyExtractLinks(
+    sidebar.map((item) => ({
+      ...item,
+      text: item.text ?? '---'
+    }))
+  )
   return links
 }
