@@ -8,8 +8,8 @@ dependencies:
     specifier: ^3.3.0
     version: 3.3.0(@algolia/client-search@4.17.0)
   '@metaapp/docsearch-react':
-    specifier: ^4.3.20
-    version: 4.3.20
+    specifier: ^4.3.23
+    version: 4.3.23
   '@vitejs/plugin-vue':
     specifier: ^4.0.0
     version: 4.0.0(vite@4.0.2)(vue@3.2.45)
@@ -420,8 +420,8 @@ packages:
     resolution: {integrity: sha512-ygCGP7vFpqS02hpZwEe1uz8cfImWX06+zRs08J+tCZRKb6k+easIaIHFtY9ZSxt7j9L/gAPLDo/5RmOT6z0DPQ==}
     dev: true
 
-  /@metaapp/docsearch-react@4.3.20:
-    resolution: {integrity: sha512-crx5DVP5Ri2nWN9bdyFeVayf5QczD/MUQt2KsFU6+Q4pELd6z/0qH+TM8bz2M54NmbRJ4vzuQlDFM8SaX7ep3w==}
+  /@metaapp/docsearch-react@4.3.23:
+    resolution: {integrity: sha512-Mjajdqr3TN1AuuEWK+0glaAJkLCF6avA4CTAlqI884cVJmqSlAl9unOS05NUvq/PW8mi6hFnaXbPkvUR2kpVew==}
     peerDependencies:
       '@types/react': ^18.0.28
       react: ^18.2.0
